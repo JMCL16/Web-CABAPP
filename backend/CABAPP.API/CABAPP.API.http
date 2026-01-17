@@ -1,0 +1,6 @@
+@CABAPP.API_HostAddress = http://localhost:5014
+
+GET {{CABAPP.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
