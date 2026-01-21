@@ -1,0 +1,4 @@
+namespace CABAPP.Domain.Entities
+{
+    
+}

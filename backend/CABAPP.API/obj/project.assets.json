@@ -1591,6 +1591,44 @@
             "rid": "win"
           }
         }
+      },
+      "CABAPP.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CABAPP.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CABAPP.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CABAPP.Application.dll": {}
+        }
+      },
+      "CABAPP.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/CABAPP.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CABAPP.Domain.dll": {}
+        }
+      },
+      "CABAPP.Infraestructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "CABAPP.Application": "1.0.0",
+          "CABAPP.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CABAPP.Infraestructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CABAPP.Infraestructure.dll": {}
+        }
       }
     }
   },
@@ -4483,10 +4521,27 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "CABAPP.Application/1.0.0": {
+      "type": "project",
+      "path": "../CABAPP.Application/CABAPP.Application.csproj",
+      "msbuildProject": "../CABAPP.Application/CABAPP.Application.csproj"
+    },
+    "CABAPP.Domain/1.0.0": {
+      "type": "project",
+      "path": "../CABAPP.Domain/CABAPP.Domain.csproj",
+      "msbuildProject": "../CABAPP.Domain/CABAPP.Domain.csproj"
+    },
+    "CABAPP.Infraestructure/1.0.0": {
+      "type": "project",
+      "path": "../CABAPP.Infraestructure/CABAPP.Infraestructure.csproj",
+      "msbuildProject": "../CABAPP.Infraestructure/CABAPP.Infraestructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "CABAPP.Application >= 1.0.0",
+      "CABAPP.Infraestructure >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 9.0.0",
       "Microsoft.AspNetCore.OpenApi >= 9.0.10",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.0",
@@ -4525,7 +4580,14 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\jefer\\CABAPP\\Web-CABAPP\\backend\\CABAPP.Application\\CABAPP.Application.csproj": {
+              "projectPath": "C:\\Users\\jefer\\CABAPP\\Web-CABAPP\\backend\\CABAPP.Application\\CABAPP.Application.csproj"
+            },
+            "C:\\Users\\jefer\\CABAPP\\Web-CABAPP\\backend\\CABAPP.Infraestructure\\CABAPP.Infraestructure.csproj": {
+              "projectPath": "C:\\Users\\jefer\\CABAPP\\Web-CABAPP\\backend\\CABAPP.Infraestructure\\CABAPP.Infraestructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
